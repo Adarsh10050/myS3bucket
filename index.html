@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cloud & S3 Demo Page</title>
+
+  <style>
+    /* --------- Global Styles --------- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #ffffff;
+      line-height: 1.6;
+    }
+
+    a {
+      color: #00e6e6;
+      text-decoration: none;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1100px;
+      margin: auto;
+      animation: fadeIn 1.2s ease-in;
+    }
+
+    h1,
+    h2 {
+      margin-bottom: 20px;
+      color: #00e6e6;
+    }
+
+    p {
+      margin-bottom: 15px;
+      color: #e0e0e0;
+    }
+
+    /* --------- Header --------- */
+    header {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      animation: slideDown 1.2s ease;
+    }
+
+    header h3 {
+      margin-top: 10px;
+      font-weight: normal;
+      color: #cccccc;
+    }
+
+    header button {
+      margin-top: 30px;
+      padding: 12px 30px;
+      border: none;
+      border-radius: 30px;
+      background: #00e6e6;
+      color: #003333;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: transform 0.3s, background 0.3s;
+    }
+
+    header button:hover {
+      transform: scale(1.1);
+      background: #00cccc;
+    }
+
+    /* --------- Cards --------- */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.08);
+      padding: 25px;
+      border-radius: 15px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    }
+
+    /* --------- Footer --------- */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.4);
+      margin-top: 40px;
+      font-size: 0.9rem;
+    }
+
+    /* --------- Animations --------- */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideDown {
+      from {
+        transform: translateY(-40px);
+        opacity: 0;
+      }
+
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header / Hero Section -->
+  <header>
+    <h1>Welcome to Cloud Demo Page ☁️</h1>
+    <h3>Exploring AWS S3 & Cloud Concepts</h3>
+    <button onclick="document.getElementById('overview').scrollIntoView({behavior:'smooth'})">
+      Learn More
+    </button>
+  </header>
+
+  <!-- Overview Section -->
+  <section id="overview">
+    <h2>Cloud Concepts</h2>
+    <p>
+      This page demonstrates the capabilities of cloud storage and hosting using <strong>AWS S3</strong>.
+      Cloud computing allows you to store, manage, and serve content globally without the need for physical servers.
+    </p>
+    <p>
+      Static websites hosted on S3 are fast, scalable, and cost-effective. They can be deployed with automation tools
+      like <strong>Terraform</strong> for Infrastructure as Code.
+    </p>
+  </section>
+
+  <!-- Services / Features -->
+  <section>
+    <h2>Cloud Services Demo</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>☁️ S3 Storage</h3>
+        <p>Store files, HTML, CSS, images, and serve them publicly.</p>
+      </div>
+      <div class="card">
+        <h3>⚙️ Automation</h3>
+        <p>Deploy resources using Terraform scripts, enabling Infrastructure as Code.</p>
+      </div>
+      <div class="card">
+        <h3>💡 Scalability</h3>
+        <p>Websites hosted on S3 automatically scale to handle visitors worldwide.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Demo Projects -->
+  <section>
+    <h2>Demo Projects</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>S3 Static Website</h3>
+        <p>
+          Example of a static website deployed on AWS S3, demonstrating public access, bucket policies, and website hosting.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Cloud Automation</h3>
+        <p>
+          Infrastructure as Code with Terraform to automate cloud resource creation and deployment.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact / Reference -->
+  <section>
+    <h2>Reference</h2>
+    <p>
+      This demo page is hosted on AWS S3 using Terraform and demonstrates cloud hosting, scalability, and automation concepts.
+    </p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 Demo Page | Hosted on AWS S3 | Built with ❤️ using HTML, CSS & Cloud Concepts
+  </footer>
+
+</body>
+
+</html>
